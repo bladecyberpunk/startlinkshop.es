@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-es" lang="es-es">
+ 
+ <head>
+ 
+  <title>Ejemplo de envío de formulario por email con php</title>
+ 
+  <meta name="description" content="Formulario de contacto enviado por correo electronico usando php"/>
+ 
+  </head>
+ 
+<body>
+
+  
+
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <p class="MsoNormal" style="text-align: center;"><span style="text-indent: 35.4pt;"><br />
+               </span><strong style="text-align: left;"><span style="font-size: 22.0pt; line-height: 115%; color: #76923c; mso-themecolor: accent3; mso-themeshade: 191;">¡Relax, enjoy, live in freedom! <br />
+            <br />
+            RENTAL BOOKING FORM</span></strong></p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal"> </p>
+
+ 
+ <p><img src="http://www.autocaravanastenerife.es/FRESERVA/roulot.gif" width="100" height="70" align="right" /></p>
+ <div id="formulario">
+   
+   <form action="send.php" method="POST">
+   <p>(*) Indicates a required field   <br><br>
+      Name (*)   :    
+    <input name="name" size="40" type="text" /><br>
+      Last Name (*)   :
+      <input name="surname" size="40" type="text" />
+      <br />
+      ID or Passport(*)   :
+      <input name="id" size="40" type="text" id="dni" />
+      <br />
+      Address (*)   :
+      <input name="address" size="40" type="text" id="direccion" />
+      <br />
+      Population (*)   :
+      <input name="population" size="40" type="text" id="poblacion" />
+      <br />
+      Province (*)   :
+      <input name="province" size="40" type="text" />
+      <br>
+      Country (*) :
+<input name="country" size="40" type="text" /><br>
+      Phone (*) :
+<input name="phone" size="40" type="text" /><br>
+      Email (*) :
+     <input name="email" size="40" type="text" /><br><br>
+      Message:  
+     <textarea cols="40" rows="6" name="message"></textarea>
+     
+     <input name="send" type="submit" value="send" />
+   </p>
+<p>&nbsp;</p>
+   <p> <em>According to Law 15/1999 of 13 December on Protection of Personal Data, Motorhomes Tenerife informs that the personal data provided voluntarily by completing this form will be included in a confidential database of motorhomes Tenerife. <br />
+       <br />
+       In addition to registering the client gives consent to use web name your personal data to inform you about products or services that may be of interest, respecting, in any case, the Spanish legislation on data protection. In the course Motorhomes Tenerife expected to surrender their personal data to third parties, obtain prior informed consent of the purpose for which such data are used.<br />
+       <br />
+    You can exercise your rights of access, modification, cancellation and opposition by writing to Motorhomes Tenerife - C / Llano Navajas No. 39  <br />
+    Charco del Pino - 38,595 - Granadilla de Abona - Tenerife - Canary Islands - Spain -</em></p>
+ </form>
+ </div>
+</body>
+</html>

@@ -1,0 +1,614 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#k2Container.itemView .itemIntroText {
+  font-size: 12px;
+  line-height: 23px;
+  font-weight: normal;
+  font-style: italic;
+  color: #444444;
+  padding: 4px 0 12px;
+}
+.itemSocialSharing {
+  padding: 8px 0;
+}
+.itemSocialSharing .itemTwitterButton {
+  float: left;
+  margin: 2px 24px 0 0;
+}
+.itemSocialSharing .itemFacebookButton {
+  float: left;
+  margin-right: 24px;
+  width: 200px;
+}
+.itemContentFooter {
+  border-top: 1px solid #DDDDDD;
+  color: #999999;
+  display: block;
+  margin: 16px 0 4px;
+  padding: 4px;
+  text-align: right;
+}
+#k2Container div.itemRatingBlock {
+  padding: 8px 0;
+}
+#k2Container div.itemRatingBlock span {
+  display: block;
+  float: left;
+  font-style: normal;
+  padding: 0 4px 0 0;
+  margin: 0;
+  color: #999;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm {
+  display: block;
+  vertical-align: middle;
+  line-height: 25px;
+  float: left;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .formLogLoading {
+  background: url(../images/k2/loading.gif) no-repeat left center;
+  height: 25px;
+  padding: 0 0 0 20px;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingLog {
+  font-size: 11px;
+  margin: 0;
+  padding: 0 0 0 4px;
+  float: left;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList {
+  position: relative;
+  float: left;
+  width: 125px;
+  height: 25px;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent url(../images/k2/transparent_star.gif) left -1000px repeat-x;
+  background-position: left top;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: -1000px;
+  height: 25px;
+  line-height: 25px;
+  outline: none;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList a:hover {
+  background: transparent url(../images/k2/transparent_star.gif) left -1000px repeat-x;
+  background-position: left bottom;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList a.one-star {
+  width: 20%;
+  z-index: 6;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList a.two-stars {
+  width: 40%;
+  z-index: 5;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList a.three-stars {
+  width: 60%;
+  z-index: 4;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList a.four-stars {
+  width: 80%;
+  z-index: 3;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList a.five-stars {
+  width: 100%;
+  z-index: 2;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList li {
+  display: inline;
+  background: none;
+  padding: 0;
+}
+#k2Container div.itemRatingBlock div.itemRatingForm .itemRatingList .itemCurrentRating {
+  background: transparent url(../images/k2/transparent_star.gif) left -1000px repeat-x;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: -1000px;
+  height: 25px;
+  line-height: 25px;
+  outline: none;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  background-position: 0 center;
+  margin: 0;
+  padding: 0;
+}
+span.siteRoot {
+  display: none;
+}
+.TagsBlock {
+  border: 0;
+  padding: 4px 0;
+}
+.TagsBlock span {
+  padding-right: 39px;
+  color: #666666;
+  font-weight: normal;
+}
+.TagsBlock ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+.TagsBlock ul li {
+  display: inline;
+  list-style: none;
+  padding: 0 4px 0 0;
+  margin: 0;
+  text-align: center;
+}
+.itemAuthorBlock {
+  background: transparent;
+  border: 0;
+  margin: 0 0 16px 0;
+  padding: 8px;
+}
+.itemAuthorBlock .itemAuthorAvatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  float: left;
+  display: block;
+  background: #fff;
+  padding: 4px;
+  border: 1px solid #ddd;
+  margin: 0 8px 0 0;
+}
+.itemAuthorBlock .itemAuthorDetails {
+  margin: 0;
+  padding: 4px 0 0 0;
+}
+.itemAuthorBlock .itemAuthorDetails h3 .authorName {
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+.itemAuthorBlock .itemAuthorDetails h3 .authorName a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+.itemAuthorBlock .itemAuthorDetails span .itemAuthorUrl {
+  font-weight: bold;
+  color: #555;
+  border-right: 1px solid #ccc;
+  padding: 0 8px 0 0;
+  margin: 0 4px 0 0;
+}
+.itemAuthorBlock .itemAuthorDetails span .itemAuthorEmail {
+  font-weight: bold;
+  color: #555;
+}
+.itemAuthorBlock .itemAuthorDetails span .itemAuthorEmail a {
+  font-weight: normal;
+}
+.itemAuthorBlock:hover .itemAuthorAvatar {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.itemComments {
+  background: transparent;
+  border: 0;
+}
+.itemComments .itemCommentsCounter {
+  border-bottom: 1px solid #cccccc;
+}
+.itemComments .itemCommentsCounter:before {
+  content: "\f0e6";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+}
+.itemComments ul.itemCommentsList {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+.itemComments ul.itemCommentsList li {
+  padding: 5px 0;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+}
+.itemComments ul.itemCommentsList li img {
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  float: left;
+  margin: 4px 4px 4px 0;
+  padding: 4px;
+  background: #fff;
+}
+.itemComments ul.itemCommentsList li.authorResponse {
+  background: ;
+  border: 0;
+  margin-bottom: 10px;
+}
+.itemComments ul.itemCommentsList li.unpublishedComment {
+  background: #ffeaea;
+}
+.itemComments ul.itemCommentsList li span.commentDate {
+  padding: 0 4px 0 0;
+  margin: 0 8px 0 0;
+  border-right: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 14px;
+}
+.itemComments ul.itemCommentsList li span.commentAuthorName {
+  font-weight: bold;
+  font-size: 14px;
+}
+.itemComments ul.itemCommentsList li span.commentAuthorEmail {
+  display: none;
+}
+.itemComments ul.itemCommentsList li span.commentLink {
+  margin-left: 8px;
+}
+.itemComments ul.itemCommentsList li span.commentLink a {
+  font-size: 11px;
+  color: #999;
+  text-decoration: underline;
+}
+.itemComments ul.itemCommentsList li span.commentLink a:hover {
+  font-size: 11px;
+  color: #555;
+  text-decoration: underline;
+}
+.itemComments ul.itemCommentsList li span.commentToolbar {
+  display: block;
+  clear: both;
+}
+.itemComments ul.itemCommentsList li span.commentToolbar a {
+  font-size: 11px;
+  color: #999;
+  text-decoration: underline;
+  margin-right: 4px;
+}
+.itemComments ul.itemCommentsList li span.commentToolbar a:hover {
+  font-size: 11px;
+  color: #555;
+  text-decoration: underline;
+}
+.itemComments ul.itemCommentsList li span.commentToolbarLoading {
+  background: url(../images/k2/searchLoader.gif) no-repeat 100% 50%;
+}
+.itemCommentsForm h3 {
+  margin: 0;
+  padding: 0 0 4px 0;
+}
+.itemCommentsForm form input#submitCommentButton {
+  border: 0;
+  padding: 5px 10px;
+  margin: 16px 0 0;
+  display: block;
+  font-size: 16px;
+}
+.itemCommentsForm form label {
+  display: block;
+  margin: 12px 0 0 2px;
+}
+.itemCommentsForm form textarea.inputbox {
+  display: block;
+  width: 350px;
+  height: 160px;
+  margin: 0;
+}
+.itemCommentsForm form input.inputbox {
+  display: block;
+  width: 350px;
+  margin: 0;
+}
+.itemCommentsForm form span#formLog {
+  margin: 0 0 0 20px;
+  padding: 0 0 0 20px;
+  font-weight: bold;
+  color: #CF1919;
+}
+.itemCommentsForm form .formLogLoading {
+  background: url(../images/k2/loading.gif) no-repeat left center;
+}
+.itemCommentsForm .itemCommentsFormNotes {
+  border-top: 2px solid #ccc;
+}
+div.k2FeedIcon {
+  padding: 4px 8px;
+}
+div.k2FeedIcon a {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  background: url(../images/k2/feed.png) no-repeat 50% 50%;
+}
+div.k2FeedIcon a span {
+  display: none;
+}
+.k2Padding {
+  padding: 4px;
+}
+.even {
+  background: #fffff0;
+  padding: 2px;
+  border-bottom: 1px dotted #ccc;
+}
+.odd {
+  background: #fff;
+  padding: 2px;
+  border-bottom: 1px dotted #ccc;
+}
+div.k2Pagination {
+  padding: 8px;
+  margin: 24px 0 4px 0;
+  text-align: center;
+  color: #999;
+}
+div.k2Pagination ul {
+  text-align: center;
+}
+div.k2Pagination ul li {
+  display: inline;
+}
+.clr {
+  border: medium none;
+  clear: both;
+  display: block;
+  float: none;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+.vina-header-toolbar {
+  margin: 0;
+  padding: 0;
+}
+.vina-header-toolbar li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+.vina-header-toolbar li:last-child {
+  margin-right: 0;
+}
+.k2AccountPage table.admintable {
+  width: 100%;
+}
+.k2AccountPage table.admintable th.k2ProfileHeading {
+  background: transparent;
+}
+.k2AccountPage table.admintable td.key,
+.k2AccountPage table.admintable td.paramlist_key {
+  background: transparent;
+  border: 0;
+  display: inline-block;
+}
+.itemRatingForm {
+  line-height: 22px;
+}
+.vina-search input[type="text"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 8px;
+  width: 100%;
+}
+div.k2CalendarBlock {
+  min-height: 235px;
+  height: auto;
+  margin-bottom: 8px;
+}
+div.k2CalendarBlock table.calendar {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border-collapse: collapse;
+}
+div.k2CalendarBlock tr td {
+  line-height: 28px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #f4f4f4;
+  background: #fff;
+}
+div.k2CalendarBlock tr td.calendarNavMonthNext,
+div.k2CalendarBlock tr td.calendarCurrentMonth,
+div.k2CalendarBlock tr td.calendarNavMonthPrev {
+  background: ;
+  text-align: center;
+}
+div.k2CalendarBlock tr td.calendarNavMonthNext a,
+div.k2CalendarBlock tr td.calendarCurrentMonth a,
+div.k2CalendarBlock tr td.calendarNavMonthPrev a {
+  font-size: 20px;
+  text-decoration: none;
+}
+div.k2CalendarBlock tr td.calendarDayName {
+  background: #e9e9e9;
+  font-size: 11px;
+  width: 14.2%;
+}
+div.k2CalendarBlock tr td.calendarToday {
+  background: #135cae;
+  color: #fff;
+}
+div.k2CalendarBlock tr td.calendarDateEmpty {
+  background: #fbfbfb;
+}
+div.k2CalendarBlock tr td .calendarTodayLinked {
+  background: #135cae;
+  color: #fff;
+  padding: 0;
+}
+div.k2CalendarBlock tr td .calendarTodayLinked a {
+  display: block;
+  padding: 2px;
+  color: #fff;
+  text-decoration: none;
+}
+div.k2CalendarBlock tr td .calendarTodayLinked a:hover {
+  display: block;
+  background: #BFD9FF;
+  padding: 2px;
+  text-decoration: none;
+}
+.vina-blogs li {
+  list-style: none;
+  border: 0;
+  margin-bottom: 13px !important;
+}
+.vina-blogs ul,
+.vina-blogs li {
+  margin: 0;
+  background: ;
+  padding: 0;
+}
+.vina-blogs .moduleItemTitle {
+  display: block;
+  font-size: 14px;
+  overflow: hidden;
+  color: ;
+  line-height: 18px;
+  font-weight: 400;
+}
+.vina-blogs img {
+  -webkit-transition: all 400ms linear 0s;
+  -moz-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
+.vina-blogs img:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.vina-blogs .moduleItemDateCreated {
+  font-size: 12px;
+  color: #999999;
+}
+.vina-blogs .moduleItemDateCreated i:before {
+  font-size: 16px;
+}
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img {
+  border: 0;
+  margin: 0;
+}
+.vina-tag {
+  font-weight: bold;
+  background: #cccccc;
+  display: inline-block;
+  line-height: 26px;
+  padding: 0 17px !important;
+  margin-bottom: 15px;
+  font-size: 100% !important;
+  margin-right: 25px;
+  position: relative;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+  top: 0;
+  content: "";
+  cursor: pointer;
+  text-align: center;
+  text-transform: lowercase;
+  border: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.vina-tag:before {
+  color: rgba(255,255,255,0.9);
+  background: #cccccc;
+  display: inline-block;
+  padding: 10px 10px 8px;
+  position: absolute;
+  top: 4px;
+  right: -6px;
+  z-index: 1;
+  content: "";
+  cursor: pointer;
+  -webkit-transform: rotateY(6deg) rotateZ(-45deg) scaleX(1) scaleY(1) scaleZ(1);
+  -moz-transform: rotateY(6deg) rotateZ(-45deg) scaleX(1) scaleY(1) scaleZ(1);
+  -o-transform: rotateY(6deg) rotateZ(-45deg) scaleX(1) scaleY(1) scaleZ(1);
+  transform: rotateY(6deg) rotateZ(-45deg) scaleX(1) scaleY(1) scaleZ(1);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.vina-tag:after {
+  display: inline-block;
+  background: #FFF;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  z-index: 2;
+  content: "";
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+div.catItemHeader span.catItemDateCreated,
+div.tagItemHeader span.tagItemDateCreated {
+  font-size: 12px;
+}

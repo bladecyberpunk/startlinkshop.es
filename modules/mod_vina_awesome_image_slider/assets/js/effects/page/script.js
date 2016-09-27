@@ -1,0 +1,13 @@
+/*
+# ------------------------------------------------------------------------
+# Vina Awesome Image Slider for Joomla 3
+# ------------------------------------------------------------------------
+# Copyright(C) 2014 www.VinaGecko.com. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: VinaGecko.com
+# Websites: http://vinagecko.com
+# Forum:    http://vinagecko.com/forum/
+# ------------------------------------------------------------------------
+*/
+
+jQuery.extend(jQuery.easing,{easeOutOneBounce:function(e,b,c,a,i){var g=0.8;var f=0.2;var d=g*g;if(e<0.0001){return 0}else{if(e<g){return e*e/d}else{return 1-f*f+(e-g-f)*(e-g-f)}}}});jQuery.extend(jQuery.easing,{easeOutBounce:function(e,f,a,h,g){if((f/=g)<(1/2.75)){return h*(7.5625*f*f)+a}else{if(f<(2/2.75)){return h*(7.5625*(f-=(1.5/2.75))*f+0.75)+a}else{if(f<(2.5/2.75)){return h*(7.5625*(f-=(2.25/2.75))*f+0.9375)+a}else{return h*(7.5625*(f-=(2.625/2.75))*f+0.984375)+a}}}},easeOutBack:function(c,e,a,g,d,f){if(f==undefined){f=1.70158}return g*((e=e/d-1)*e*((f+1)*e+f)+1)+a},easeOutBack2:function(c,e,a,g,d,f){if(c<f/2){jQuery.easing.easeInCirc(c,e,a,g,d,f/2)}else{return jQuery.easing.easeOutBounce(c-f/2,e,a,g,d,f/2)}}});function ws_page(d,b,a){var f=d.angle||17;var c=jQuery("<div/>").css({position:"absolute",width:"100%",height:"100%",top:"0%",overflow:"hidden"});var e=a.find("ul");c.hide().appendTo(a);this.go=function(l,j){function n(){c.find("div").stop(1,1);c.hide();c.empty()}n();e.hide();var k=jQuery("<div/>").css({position:"absolute",left:0,top:"-100%",width:"100%",height:"100%",overflow:"hidden","z-index":9}).append(jQuery(b.get(l)).clone().css({width:"100%",height:"100%"})).appendTo(c);var i=jQuery("<div/>").css({position:"absolute",left:0,top:0,width:"100%",height:"100%",overflow:"visible","z-index":10,"transform-origin":"top left","-webkit-backface-visibility":"hidden","-moz-backface-visibility":"hidden","-ms-backface-visibility":"hidden","-o-backface-visibility":"hidden","backface-visibility":"hidden"}).append(jQuery(b.get(j)).clone().css({width:"100%",height:"100%"})).appendTo(c);c.show();var p=i;var o=p.width(),m=p.height();var g=!!document.all;if(g){i.css({left:"-50%",top:"-50%"});p=i.find("img");p.css({translateX:o/2,translateY:m/2})}p.animate({rotate:f,translateX:g?Math.sqrt(o*o+m*m)*Math.sin(Math.PI*f/180)/2+o/4:0,translateY:g?Math.sqrt(o*o+m*m)*Math.cos(Math.PI*f/180)/2-m/2:0},{duration:2*d.duration/3,easing:"easeOutOneBounce"}).animate(g?{translateY:"+="+m}:{top:"100%"},{duration:d.duration/3,easing:"linear",complete:function(){$(this).hide()}});k.animate({top:"-30%"},{duration:d.duration/2}).animate({top:"0%"},{easing:"easeOutBounce",duration:d.duration/2});return l}};

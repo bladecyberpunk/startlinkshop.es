@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+	
+<!-- Author Block -->
+	<name>Vina Awesome Image Slider</name>
+	<author>VinaGecko.com</author>
+	<creationDate>May 26, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>support@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.0.0</version>
+	
+	<description>
+		<![CDATA[<div style="border: 1px solid red; border-radius: 7px; padding: 10px;">
+		<strong>Vina Awesome Image Slider</strong> is a free responsive image slider for Joomla 3 with many features: 22 Transition Effects (Collage, Photo, Domino, Page, Rotate, Blur, Flip, Blast, Fly, Blinds, Squares, Slices, Basic, Fade, Ken Burns...), Unlimited Images, Fully responsive...<br/><br/>
+		<strong>VinaGecko.com</strong> - Premium <a href="http://vinagecko.com/joomla-modules" target="_blank">Joomla Modules</a>, <a href="http://vinagecko.com/joomla-plugins" target="_blank">Joomla Plugins</a>, <a href="http://vinagecko.com/joomla-templates" target="_blank">Joomla Templates</a>.
+		</div>]]>
+	</description>
+
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_awesome_image_slider">mod_vina_awesome_image_slider.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>samples</folder>
+		<folder>libs</folder>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_awesome_image_slider.ini</language>
+	</languages>
+	
+<!-- Config Block -->
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_vina_awesome_image_slider/libs/elements">
+			<fieldset name="basic">
+				<field
+					name="moduleWidth"
+					type="text"
+					default="600"
+					label="MOD_VINA_AWESOME_SLIDER_MODULE_WIDTH"
+					description="MOD_VINA_AWESOME_SLIDER_MODULE_WIDTH_DESC" />
+				<field
+					name="moduleHeight"
+					type="text"
+					default="300"
+					label="MOD_VINA_AWESOME_SLIDER_MODULE_HEIGHT"
+					description="MOD_VINA_AWESOME_SLIDER_MODULE_HEIGHT_DESC" />
+				<field
+					name="moduleScaleWidth"
+					type="text"
+					default="600px"
+					label="MOD_VINA_AWESOME_SLIDER_MODULE_SCALE_WIDTH"
+					description="MOD_VINA_AWESOME_SLIDER_MODULE_SCALE_WIDTH_DESC" />
+				<field 
+                    name="resizeImage" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_RESIZE_IMAGE" 
+                    description="MOD_VINA_AWESOME_SLIDER_RESIZE_IMAGE_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="transitionEffect" 
+                    type="list" 
+                    default="blinds" 
+                    label="MOD_VINA_AWESOME_SLIDER_TRANSITION_EFFECT" 
+                    description="MOD_VINA_AWESOME_SLIDER_TRANSITION_EFFECT_DESC">
+                        <option value="basic">Basic</option>
+                        <option value="basic_linear">Basic linear</option>
+						<option value="blast">Blast</option>
+						<option value="blinds">Blinds</option>
+						<option value="blur">Blur</option>
+						<option value="book">Book</option>
+						<option value="collage">Collage</option>
+						<option value="cube">Cube</option>
+						<option value="domino">Domino</option>
+						<option value="fade">Fade</option>
+						<option value="flip">Flip</option>
+						<option value="fly">Fly</option>
+						<option value="kenburns">Kenburns</option>
+						<option value="overlay">Overlay</option>
+						<option value="page">Page</option>
+						<option value="photo">Photo</option>
+						<option value="rotate">Rotate</option>
+						<option value="seven">Seven</option>
+						<option value="slices">Slices</option>
+						<option value="squares">Squares</option>
+						<option value="stack">Stack</option>
+						<option value="stack_vertical">Stack vertical</option>
+                </field>
+				<field
+					name="duration"
+					type="text"
+					default="2000"
+					label="MOD_VINA_AWESOME_SLIDER_DURATION"
+					description="MOD_VINA_AWESOME_SLIDER_DURATION_DESC" />
+				<field
+					name="delay"
+					type="text"
+					default="2000"
+					label="MOD_VINA_AWESOME_SLIDER_DELAY"
+					description="MOD_VINA_AWESOME_SLIDER_DELAY_DESC" />
+				<field 
+                    name="autoPlay" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_AUTOPLAY" 
+                    description="MOD_VINA_AWESOME_SLIDER_AUTOPLAY_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="playPause" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_PLAY_PAUSE" 
+                    description="MOD_VINA_AWESOME_SLIDER_PLAY_PAUSE_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="stopOnHover" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_STOP_ON_HOVER" 
+                    description="MOD_VINA_AWESOME_SLIDER_STOP_ON_HOVER_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="loop" 
+                    type="radio" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_LOOP" 
+                    description="MOD_VINA_AWESOME_SLIDER_LOOP_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="bullets" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_BULLETS" 
+                    description="MOD_VINA_AWESOME_SLIDER_BULLETS_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="smallImageWidth"
+					type="text"
+					default="120"
+					label="MOD_VINA_AWESOME_SLIDER_SMALL_IMAGE_WIDTH"
+					description="MOD_VINA_AWESOME_SLIDER_SMALL_IMAGE_WIDTH_DESC" />
+				<field
+					name="smallImageHeight"
+					type="text"
+					default="60"
+					label="MOD_VINA_AWESOME_SLIDER_SMALL_IMAGE_HEIGHT"
+					description="MOD_VINA_AWESOME_SLIDER_SMALL_IMAGE_HEIGHT_DESC" />
+				<field 
+                    name="caption" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_CAPTION" 
+                    description="MOD_VINA_AWESOME_SLIDER_CAPTION_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="captionPosition"
+					type="textarea"
+					default="bottom: 30px; left: 0; border-radius: 0 5px 5px 0;"
+					label="MOD_VINA_AWESOME_SLIDER_CAPTION_POSITION"
+					description="MOD_VINA_AWESOME_SLIDER_CAPTION_POSITION_DESC" />
+				<field 
+                    name="captionEffect" 
+                    type="list" 
+                    default="slide" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_CAPTION_EFFECT" 
+                    description="MOD_VINA_AWESOME_SLIDER_CAPTION_EFFECT_DESC">
+                        <option value="slide">with Slide</option>
+                        <option value="fade">with Fade</option>
+						<option value="move">with Elastic Move</option>
+                </field>
+				<field 
+                    name="controls" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="MOD_VINA_AWESOME_SLIDER_ARROWS" 
+                    description="MOD_VINA_AWESOME_SLIDER_ARROWS_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+			</fieldset>
+			
+			<fieldset name="slider">
+				<field name="slides" type="data" label="Slides" description="" filter="raw" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field 
+                    name="copyRightText" 
+                    type="radio" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_SHOW_COPYRIGHT_TEXT" 
+                    description="VINA_SHOW_COPYRIGHT_TEXT_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+						<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-es" lang="es-es">
+ 
+ <head>
+ 
+  <title>Ejemplo de envío de formulario por email con php</title>
+ 
+  <meta name="description" content="Formulario de contacto enviado por correo electronico usando php"/>
+ 
+  </head>
+ 
+<body>
+
+  
+
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <p class="MsoNormal" style="text-align: center;"><span style="text-indent: 35.4pt;"><br />
+               </span><strong style="text-align: left;"><span style="font-size: 22.0pt; line-height: 115%; color: #76923c; mso-themecolor: accent3; mso-themeshade: 191;">¡Descansa, disfruta, vive en libertad !<br />
+            <br />
+            FORMULARIO DE RESERVA DE ALQUILER</span></strong></p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal"> </p>
+
+ 
+ <p><img src="http://www.autocaravanastenerife.es/FRESERVA/roulot.gif" width="100" height="70" align="right" /></p>
+ <div id="formulario">
+   
+   <form action="enviar.php" method="POST">
+   <p>(*) Indica campo obligatorio  <br><br>
+      Nombre (*)   :    
+    <input name="nombre" size="40" type="text" /><br>
+      Apellidos (*)   :
+      <input name="apellido" size="40" type="text" />
+      <br />
+      D.N.I. o Pasaporte (*)   :
+      <input name="dni" size="40" type="text" id="dni" />
+      <br />
+      Direcci&oacute;n (*)   :
+      <input name="direccion" size="40" type="text" id="direccion" />
+      <br />
+      Poblaci&oacute;n (*)   :
+      <input name="poblacion" size="40" type="text" id="poblacion" />
+      <br />
+      Provincia (*)   :
+      <input name="provincia" size="40" type="text" />
+      <br>
+      Pa&iacute;s (*) :
+<input name="pais" size="40" type="text" /><br>
+      Tel&eacute;fono (*) :
+<input name="telefono" size="40" type="text" /><br>
+     Email (*) :
+     <input name="email" size="40" type="text" /><br><br>
+     Mensaje: 
+     <textarea cols="40" rows="6" name="message"></textarea>
+     
+     <input name="enviar" type="submit" value="Enviar" />
+   </p>
+<p>&nbsp;</p>
+   <p> <em>Seg&uacute;n la Ley Org&aacute;nica 15/1999 de 13 de diciembre de Protecci&oacute;n de Datos de car&aacute;cter personal, Autocaravanas Tenerife&nbsp;informa que los datos personales facilitados de forma voluntaria al cumplimentar este formulario quedar&aacute;n incorporados de forma confidencial en la base de datos de Autocaravanas Tenerife&nbsp;.<br />
+       <br />
+       Asimismo al registrarse el cliente presta su consentimiento para que nombre web utilice sus datos personales con el fin de informarle sobre servicios o productos que pudiesen ser de su inter&eacute;s, respetando, en todo caso, la legislaci&oacute;n espa&ntilde;ola sobre protecci&oacute;n de datos. En el supuesto que&nbsp;Autocaravanas Tenerife&nbsp;prevea ceder sus datos personales a terceros, obtendr&aacute; previamente su consentimiento inform&aacute;ndole de la finalidad a que se destinar&aacute;n dichos datos.<br />
+       <br />
+    Podr&aacute; ejercer sus derechos de acceso, modificaci&oacute;n, cancelaci&oacute;n y oposici&oacute;n mediante petici&oacute;n escrita dirigida a Autocaravanas Tenerife - C/ Llano Navajas N&ordm; 39 -<br />
+    Charco del Pino -    38.595 - Granadilla de Abona&nbsp;-    Tenerife - Islas Canarias - Espa&ntilde;a</em></p>
+ </form>
+ </div>
+</body>
+</html>

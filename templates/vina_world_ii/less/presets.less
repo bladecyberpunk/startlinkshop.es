@@ -1,0 +1,1070 @@
+/**
+ * @package Sample K2
+ * @author VinaGecko.com http://VinaGecko.com
+ * @copyright Copyright (C) 2014 www.VinaGecko.com
+ * @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+*/
+
+@import 'variables';
+@import 'mixins';
+
+// Button
+.btn-primary(@btnPrimaryBackground: @btnPrimaryBackground) {
+  .buttonBackground(@btnPrimaryBackground, spin(@btnPrimaryBackground, 20%));
+}
+
+//Link color
+a:not(.btn) {
+	color: darken(@link_color,20%);
+	&:hover {
+	  color: @link_color;
+	}
+}
+.color {
+	color: @link_color;
+}
+body {
+	color:@text_color;
+}
+
+//header
+#sp-header-wrapper {
+	//Logo
+	.logo{
+		background-image:url(../../images/presets/@{preset}/logo.png);
+	}
+	.search{
+		form{
+			#mod-search-searchword {
+				border: 1px solid @link_color;		
+			}
+			button {
+				background: @link_color;
+			}
+		}
+	}
+}
+#sp-main-body-wrapper {
+	#sp-right, #sp-left {
+		.module h3.header {
+			color: @white;
+			background-color: @link_color;
+		}
+	}
+	#sp-component {
+		.page-header {
+			h1 {
+				color: @white;
+				&:before {
+					background-color: darken(@link_color,15%);
+				}
+				&:after {
+					background-color: darken(@link_color,10%);
+				}
+				a {
+					color: @white;
+				}
+			}
+		}
+		.vina-form {
+			background: url("../../images/world-background/bg-goals.png") @link_color;
+			.page-header {
+				h1 {
+					color: @white;
+					&:before {
+						background-color: darken(@link_color,15%);
+					}
+					&:after {
+						background-color: darken(@link_color,10%);
+					}
+				}
+			}
+			.well {
+				.vina-control {
+					select, textarea,
+					input[type="text"], 
+					input[type="password"], 
+					input[type="datetime"], 
+					input[type="datetime-local"], 
+					input[type="date"], 
+					input[type="month"], 
+					input[type="time"], 
+					input[type="week"], 
+					input[type="number"], 
+					input[type="email"], 
+					input[type="url"], 
+					input[type="search"], 
+					input[type="tel"], 
+					input[type="color"], 
+					.uneditable-input {
+						color: @link_color;
+						background: @white;
+					}
+				}
+			}
+			.nav-stacked {
+				li {
+					a {
+						&:hover {
+							background: @white;
+							color: @link_color;
+						}
+					}
+				}
+			}
+			.toggle-editor {
+				.btn-group {
+					.btn {
+						background: @white;
+						color: @link_color;
+						&:hover {
+							background: @link_color;
+							color: @white;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	article.post {
+		background: #fff;
+		h2 {
+			a {
+				color: @link_color;
+			}
+		}
+		&:before {
+			background-color: darken(@link_color,5%);
+		}
+		&:after {
+			background-color: @link_color;
+		}
+	}
+	.entry-meta.muted {
+		a {
+			color: @link_color;
+		}
+	}
+	.contact {
+		#slide-contact {
+			.accordion-group {
+				background: @white;
+			}
+			.accordion-heading {
+				background: url("../../images/world-background/bg-goals.png") @link_color;
+				a {
+					color: @white;
+				}
+			}
+		}
+	}
+	#k2Container {
+		.vina-header-toolbar {
+			.catItemCategory, .userItemCategory {
+				background-color: darken(@link_color, 5%);
+				&:after {
+					background-color: darken(@link_color, 5%);
+				}
+			}
+			.catItemCommentsLink, .userItemCommentsLink {
+				background-color: @link_color;
+				&:before {
+					background-color: @link_color;
+				}
+			}
+			.tagItemCategory {
+				background-color: @link_color;
+			}
+		}
+		.media-heading {
+			color: @link_color;
+		}	
+		.catItemTitle, .tagItemTitle, .userItemTitle {
+			a {
+				color: @link_color;
+			}
+		}
+		.itemHeader {
+			.itemTitle {
+				color: @link_color;
+			}
+		}
+		.blogdate {
+			&:before {
+				background-color: darken(@link_color, 5%);
+			}
+			&:after {
+				background-color: @link_color;
+			}
+		}
+		.itemHits {
+			background: @link_color;
+		}
+		.itemRelated {
+			h3 {
+				color: @white;
+				&:before {
+					background-color: @link_color;
+				}
+			}
+		}
+		.itemComments {
+			.itemCommentsCounter {
+				color: @white;
+				&:before {
+					background-color: @link_color;
+				}
+			}
+		}
+		.itemCommentsForm {
+			h3 {
+				color: @white;
+				&:before {
+					background-color: @link_color;
+				}
+			}
+			form {
+				input:focus, textarea:focus {
+					border-color: @link_color;
+				}
+			}
+		}
+		.itemBackToTop {
+			a {
+				background-color: @link_color;
+				&:before {
+					color: @white;
+				}
+			}
+		}
+	}
+}
+div.blog-date {
+	background-color: @link_color;
+}
+div.blog-date-2 {
+	background-color: @link_color;
+}
+.label-info, .badge-info {
+	background: @link_color;
+}
+
+.vina-categories {
+	li {
+		&:before {
+			color: @link_color;
+		}
+	}
+}
+.pagination {
+	ul {
+		> li{
+			&.pagination-active {
+				> a, > span {
+					background-color: @link_color;
+					color: #fff;
+				}
+			}
+			>a:hover {
+				background-color: @link_color;
+				color: #fff;
+			}
+		}
+	}
+}
+.calendarTodayLinked {
+	a {
+		color: @white;
+		&:hover {
+			color: @white;
+		}
+	}	
+}
+#sp-main-menu {
+	ul {
+		&.level-0 {
+			> li {
+				&:hover,
+				&.active {
+					>a {
+						color: @white;
+						background-image: url("../../images/world-background/bg-goals.png");
+						background-position: center top;
+						background-color: @link_color;
+						&:after {
+							background-image: url("../../images/world-background/bg-goals.png");
+							background-position: center top;
+							background-color: @link_color;
+						}
+					}
+				}
+				ul {
+					li {
+						&:hover,
+						&.active {
+							>a {
+								color: @link_color;
+								border-left: 5px solid @link_color;
+								&:after {
+									border-color: transparent transparent transparent @link_color;
+									
+								}
+								&.menu-preset1 {
+									color: @link_color1;
+									border-left: 5px solid @link_color1;
+									&:after {
+										border-color: transparent transparent transparent @link_color1;
+										
+									}
+								}
+								&.menu-preset2 {
+									color: @link_color2;
+									border-left: 5px solid @link_color2;
+									&:after {
+										border-color: transparent transparent transparent @link_color2;
+										
+									}
+								}
+								&.menu-preset3 {
+									color: @link_color3;
+									border-left: 5px solid @link_color3;
+									&:after {
+										border-color: transparent transparent transparent @link_color3;
+										
+									}
+								}
+								&.menu-preset4 {
+									color: @link_color4;
+									border-left: 5px solid @link_color4;
+									&:after {
+										border-color: transparent transparent transparent @link_color4;
+										
+									}
+								}
+								&.menu-preset5 {
+									color: @link_color5;
+									border-left: 5px solid @link_color5;
+									&:after {
+										border-color: transparent transparent transparent @link_color5;
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.vina-menu {
+	background: @link_color !important;
+	&:hover {
+		background: @link_color !important;
+	}
+}
+.vina-menu-small {
+	background: @link_color !important;
+	&:hover {
+		background: @link_color !important;
+	}
+}
+#sp-feature-wrapper {
+	.vina-awesome-slider {
+		a.ws_next , a.ws_prev {
+			&:hover {
+				background: @link_color;
+			}
+		}
+	}
+}
+.vina-link {
+	background-image: url(../../images/presets/@{preset}/slide-b.png);
+	color: #fff !important;
+	border: 1px solid @link_color !important;
+	&:hover {
+		background: @white;
+		color: @link_color !important;
+	}
+}
+#sp-position-wrapper {
+	#sp-position1 {
+		#event-content {
+			.event-content {
+				background: @link_color;
+			}
+		}
+		.sp_countdown {	
+			color: @white;
+			.sp_countdown_int {
+				color: @link_color;
+			}
+			.sp_countdown_string {
+				color:lighten(@link_color, 20%);
+			}
+		}
+	}
+}
+#sp-users-wrapper {
+	
+}
+.vina-upcoming-wrapper {
+	.vina-upcoming {
+		.user-item {
+			h3.time-title {
+				border: 3px double @link_color;
+			}
+			&:hover {
+				background:  url(../../images/presets/@{preset}/user-hover.png) no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+}
+.vina-promotion {
+	.promotion-inner {
+		.promotion-link {
+			&:before, &:after{
+				background: @link_color;
+			}
+			a.give-hand {
+				color: @link_color;
+				border: 2px solid @link_color;
+			}
+		}
+		&:hover {
+			.promotion-link {
+				a.give-hand {
+					color: @white;
+					background: @link_color;
+				}
+			}
+		}
+	}
+}
+.vina-link-effect {
+	&:before, &:after{
+		background: @link_color;
+	}
+	a.vina-link-border {
+		color: @link_color;
+		border: 2px solid @link_color;
+	}
+	&:hover {
+		a.vina-link-border{
+			color: @white;
+			background: @link_color;
+		}
+	}
+}
+.vina-button {
+	color: @white !important;
+	background: @link_color !important;
+	border: 1px solid @white !important;
+	&:hover {
+		color: @link_color !important;
+		background: @white !important;
+		border: 1px solid @link_color !important;
+	}
+}
+.vina-readmore {
+	color: @link_color !important;
+	background: @white !important;
+	border: 1px solid @link_color !important;
+	&:hover {
+		color: @white !important;
+		background: @link_color !important;
+	}
+}
+.vina-feature-content {
+	ul {
+		li {
+			a {
+				color: #C6C3C2;
+				background: url(../../images/presets/@{preset}/li-bg.png) 0px 9px no-repeat;
+				&:hover {
+					color: @link_color;
+				}
+			}
+		}
+	}
+}
+.vina-our-goals {
+	.user-item {
+		.user-item-inner {
+			h4 {
+				color: @link_color;
+			}
+		}
+		&:hover {
+			background: lighten(@link_color, 10%);
+		}
+	}
+}
+.vina-our-recent-blog {
+	ul {
+		li {
+			.moduleItemAuthor {
+				a {
+					color: @link_color;
+				}
+			}
+			.moduleItemIntrotext {
+				border: 1px solid #ccc;
+				.Item-info {
+					.moduleItemTitle {
+						color: @link_color;
+					}
+					.moduleItemReadMore {
+						color: #fff;
+						background: @link_color;
+						border: 1px solid #fff;
+					}
+				}
+			}
+		}
+	}
+}
+.vina-tweeter {
+	#vina-vscoller-twitter161 {
+		a {
+			color: @link_color !important;
+		}
+	}
+}
+.vina-tab {
+	.tab {
+		ul.nav-tabs {
+			li {
+				a {
+					&:hover {
+						color: @link_color;
+						border-top: 4px solid @link_color;
+						background: @white;
+					}
+				}
+				&.active ,&:hover{
+					a {
+						color: @link_color;
+						border-top: 4px solid @link_color;
+					}
+				}
+			}
+		}
+		.tab-content {
+			.sp-block {
+				background: @link_color !important;
+			}
+		}
+	}
+}
+.module {
+	h3.header.border {
+		.title-border-content {
+			background: @link_color;
+		}
+	}
+}
+#sp-recent-wrapper {
+	.vina-recent {
+		ul {
+			li {
+				border-bottom: 5px solid @link_color;
+				&:after {
+					border-color: transparent transparent @link_color transparent;
+				}
+				a.moduleItemTitle {
+					color: lighten(@link_color,10%);
+				}
+				.moduleItemIntrotext {
+					.Item-info {
+						a.moduleItemReadMore {
+							border: 1px solid @white;
+							color: @white;
+						}
+					}
+					&:hover {
+						.Item-info {
+							a.moduleItemReadMore {
+								background: @link_color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#sp-sponsors-wrapper {
+	#sponsors {
+		.carousel-control {
+			&:hover {
+				background: @link_color;
+			}
+		}
+		ul {
+			li {
+				a {
+					background: @link_color;
+				}
+			}
+		}
+	}
+}
+.sp-main-menu-toggler {
+	background: @link_color;
+	color: @white;
+	&:hover {
+		background: darken(@link_color,10%);
+	}
+}
+.sp-mobile-menu {
+	background: #000;
+	ul {
+		li {
+			a {
+				color: #fff;
+				&:hover {
+					color: @link_color !important;
+				}
+			}
+		}
+	}
+	>ul {
+		>li {
+			border-bottom: 1px solid #333;
+			&:last-child {			
+				border: none;
+			}
+			ul.collapse {
+				li {
+					background: #333;
+				}
+				ul{
+					li {
+						background: #444;
+					}
+				}
+			}
+		}
+	}
+}
+//Widgets
+.module {
+	&.highlighted {
+		background:#3498DB;
+		a{
+			color:#fff !important;
+		}
+	}
+}
+
+/** Joomla Content **/
+	.page-header {
+		color: @link_color;
+		a {
+			color: @link_color;
+		}
+	}
+	.progress-striped .bar {
+		background-color: @link_color;
+	}
+	#vina_about_us {
+		.skill {
+			ul {
+				li {
+					border-left: 2px solid @link_color;;
+				}
+			}
+		}
+		.sp-bubble {
+			background: @link_color !important;
+			cite span {
+				border-right-color: @link_color !important;
+				border-top-color: @link_color !important;
+			}
+		}
+		.blinker-testimonial {
+			background-color: @link_color;
+		}
+	}
+	#vina_company {
+		.img-polaroid {
+			.info_team {
+				ul {
+					li {
+						a {
+							&:hover {
+								background: @link_color;
+							}
+						}
+					}
+				}
+			}
+		}
+		.sp-team  {
+			.team-text {
+				h3 {
+					color: @link_color;
+				}
+			}
+			.team-share {
+				.facebook {
+					background-color: darken(@link_color, 5%);
+					:after {
+						background-color: darken(@link_color, 5%);
+					}
+				}
+				.twitter {
+					background-color: @link_color;
+					&:before {
+						background-color: @link_color;
+					}
+					&:after {
+						background-color: @link_color;
+					}
+				}
+				.gplus {
+					background-color: lighten(@link_color, 5%);
+					&:before {
+						background-color: lighten(@link_color, 5%);
+					}
+				}
+
+			}
+		}
+	}
+	#vina_pricing_table {
+		ul {
+			background: #f5f5f5;
+			li{
+				border-bottom: 1px solid #eee;
+				color: #666;
+				&:nth-child(odd) {
+					background-color: #fff;
+				}
+				&.head {
+					background-color: @link_color;
+					color: #fff;
+				}
+				.vina-button {
+					border: 1px solid @link_color !important;
+				}
+			}
+			&:hover {
+				background: #fff;
+				li{
+					&.head {
+						background-color: lighten(@link_color, 15%);
+					}
+				}
+			}
+		}
+		.pricing_pay {
+			color: @white;
+			background: @link_color;
+		}
+	}
+	#vina_portfolio {
+		h2 {
+			color: @link_color;
+		}
+		.filter-autohide {
+			color: @link_color;
+			i {
+				border: 1px solid @link_color;
+			}
+		}
+		.gallery-filters {
+			a {
+				background: none;
+				&:hover, &.active {
+					background: @link_color;
+					color: @white;
+				}
+			}
+		}
+		ul {
+			li {
+				.info {
+					a {
+						color: #fff;
+						&:hover {
+							background: @link_color;
+						}
+					}
+				}
+				&:hover {
+					&:before {
+						width: 50%;
+					}
+					&:after {
+						width: 50%;
+					}
+					.info {
+						a {
+							
+						}
+					}
+				}
+			}
+		}
+	}
+	#vina_faq { 
+		span.number {
+			background: @link_color;
+		}
+	}
+	#vina_services {
+		.single-text {
+			ul {
+				li {
+					&:before {
+						color: @link_color;
+					}
+				}
+			}
+		}
+		.our-action {
+			background: @link_color;
+			color: @white;
+		}
+	}
+	.our-features {
+		.single-feature {
+			i {
+				background: @link_color;
+				color: @white;
+			}
+			h3 {
+				&:before {
+					background: @white;
+					color: @link_color;
+				}
+			}
+			&:hover {
+				i {
+					background: @white;
+					color: @link_color;
+				}
+				h3 {
+					a {
+						&:before {
+							background: @link_color;
+							color: @white;
+						}
+					}
+				}
+			}
+		}
+	}
+	#vina_contact_us {
+		ul.social {
+			li {
+				a {
+					border: 4px solid lighten(@link_color, 30%);
+					background: @link_color;
+					&:hover {
+						border: 4px solid @link_color;
+						em {
+							color: @link_color;
+						}
+					}
+				}
+			}
+		}
+		.map {
+			span {
+				em {
+					color: @link_color;
+				}
+			}
+		}
+	}
+	
+/** Joomla Content End **/
+
+.vina_comments {
+	.comment_link {
+		background: @white;
+		border: 1px solid @link_color;
+		a {
+			color: @link_color;
+		}
+		&:after {
+			border-color: @link_color transparent transparent transparent;
+		}
+	}
+}
+/** Category View**/
+.category {
+	.items-row {
+		.item {
+			.entry-meta.muted {
+				[class^="icon-"], [class*=" icon-"] {
+					color: @link_color;
+				}
+			}
+		}
+	}
+}
+
+.vina-tag {
+	background: @link_color;
+	.box-shadow(0 4px 0 0 darken(@link_color,10%));
+	color: @white !important;
+	&:before {
+		background: @link_color;
+		.box-shadow(0 4px 0 0 darken(@link_color,10%));
+	}
+	&:after {
+		.box-shadow(3px 3px 0 0 darken(@link_color,10%) inset);
+	}
+}
+
+.vina-icon {
+	ul {
+		li {
+			p {
+				&:hover {
+					i {
+						color: @link_color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*who's online*/
+.vina-online {
+	.header {
+		&:before {
+			color: @white;
+		}
+	}
+}
+
+/*k2 tools*/
+
+/** Calendar **/
+table.calendar tr td.calendarToday ,table.calendar tr td.calendarTodayLinked ,table.calendar tr td.calendarDateLinked a:hover{
+	background: @link_color;
+}
+
+/*k2 categories*/
+.k2CategoriesListBlock {
+	li {
+		&:before {
+			color: @link_color;
+		}
+		&:hover {
+			a {
+				color: @link_color;
+			}
+		}
+	}
+}
+
+/*k2 search*/
+.vina-search {
+	input[type="text"] {
+		&:active,&:focus {
+			.box-shadow(inset 8px 0 0 @link_color);
+		}
+	}
+}
+/*end k2 tools*/
+#login-form {
+	input:not([type='checkbox']) {
+		&:active,&:focus {
+			.box-shadow(inset 8px 0 0 @link_color);
+		}
+	}
+}
+
+.icon-color {
+	&:before {
+		color: @link_color;
+	}
+}
+
+
+/*vina news*/
+.vina-news {
+	li {
+		&:before {
+			color: @link_color;
+		}
+	}
+}
+
+#sp-bottom-wrapper {
+	#sp-bottom1 {
+		ul.about {
+			li {
+				em {
+					color: @link_color;
+				}
+			}			
+		}
+	}	
+}
+#sp-bottom-wrapper,
+#sp-footer-wrapper {
+	//background:darken(@link_color,30%);
+	color:@white;
+	h3{
+		color:@white;
+	}
+	
+	//Link
+	a:not(.btn){
+		color:lighten(@link_color, 10%);
+		 
+		&:hover{
+		   color:lighten(@link_color, 30%);
+		}
+	}
+}
+#sp-bottom-wrapper{
+	a:not(.btn){
+		color:lighten(@link_color, 10%);
+		 
+		&:hover{
+		   color:@white;
+		}
+	}
+}
+#sp-footer-wrapper {
+	.container {
+		background: @link_color;
+	}
+	a {
+		&:hover {
+			color:lighten(@link_color, 30%) !important;
+		}
+	}
+}	
+
+/*Buttons*/
+.btn-primary, button, input[type='submit'], input[type='button'], submit {
+	.btn-primary(spin(@link_color, 10%));
+}
+.border {
+	border: none;
+}
+
+.responsive {
+	@media (max-width:767px) {
+		.vina-our-goals {
+			.user-item {
+				&.circle {
+					background: lighten(@link_color, 10%);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,636 @@
+/*
+# ------------------------------------------------------------------------
+# Name - Sample K2
+# ------------------------------------------------------------------------
+# Copyright(C) 2014 www.VinaGecko.com. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: VinaGecko.com
+# Websites: http://VinaGecko.com
+# ------------------------------------------------------------------------
+*/
+@import 'mixins';
+
+
+/*default*/
+#k2Container {
+	&.itemView {
+		.itemIntroText {
+			font-size: 12px;
+			line-height: 23px;
+			font-weight: normal;
+			font-style: italic;
+			color: #444444;
+			padding: 4px 0 12px;
+		}
+	}
+}
+
+/*Social*/
+.itemSocialSharing {
+	padding: 8px 0;
+	.itemTwitterButton {
+		float: left;
+		margin: 2px 24px 0 0;
+	}
+	.itemFacebookButton {
+		float: left;
+		margin-right: 24px;
+		width: 200px;
+	}
+}
+
+.itemContentFooter {
+	 border-top: 1px solid #DDDDDD;
+    color: #999999;
+    display: block;
+    margin: 16px 0 4px;
+    padding: 4px;
+    text-align: right;
+}
+
+/*Rating*/
+#k2Container {
+	div.itemRatingBlock {
+		padding:8px 0;
+		span {
+			display:block;
+			float:left;
+			font-style:normal;
+			padding:0 4px 0 0;
+			margin:0;
+			color:#999;
+			
+		}
+		div.itemRatingForm {
+			display:block;
+			vertical-align:middle;
+			line-height:25px;
+			float:left;
+			.formLogLoading {
+				background:url(../images/k2/loading.gif) no-repeat left center;height:25px;padding:0 0 0 20px;
+			}
+			.itemRatingLog {
+				font-size:11px;
+				margin:0;
+				padding:0 0 0 4px;
+				float:left;
+			}
+			.itemRatingList {
+				position:relative;
+				float:left;
+				width:125px;
+				height:25px;
+				overflow:hidden;
+				list-style:none;
+				margin:0;
+				padding:0;
+				background: transparent url(../images/k2/transparent_star.gif) left -1000px repeat-x;
+				background-position:left top;
+				a {
+					&:hover {
+						background:transparent url(../images/k2/transparent_star.gif) left -1000px repeat-x;
+						background-position:left bottom;
+					}
+					position:absolute;
+					top:0;
+					left:0;
+					text-indent:-1000px;
+					height:25px;
+					line-height:25px;
+					outline:none;
+					overflow:hidden;
+					border:none;
+					cursor:pointer;
+					.transition(none);
+					&.one-star {
+						width:20%;
+						z-index:6;
+					}
+					&.two-stars {
+						width:40%;
+						z-index:5;
+					}
+					&.three-stars {
+						width:60%;
+						z-index:4;
+					}
+					&.four-stars {
+						width:80%;
+						z-index:3;
+					}
+					&.five-stars {
+						width:100%;
+						z-index:2;
+					}
+				}
+				li {
+					display:inline;
+					background:none;
+					padding:0;
+				}
+				.itemCurrentRating {
+					background:transparent url(../images/k2/transparent_star.gif) left -1000px repeat-x;
+					position:absolute;
+					top:0;
+					left:0;
+					text-indent:-1000px;
+					height:25px;
+					line-height:25px;
+					outline:none;
+					overflow:hidden;
+					border:none;
+					cursor:pointer;
+					z-index:1;
+					background-position:0 center;
+					margin:0;
+					padding:0;
+				}
+			}
+		}
+	}
+}
+span.siteRoot {
+	display:none;
+}
+
+/*Tags Block*/
+.TagsBlock {
+	border: 0;
+	padding: 4px 0;
+	span {
+		padding-right: 39px;
+		color: @text_color; 
+		font-weight: normal;
+	}
+	ul {
+		list-style:none;
+		padding:0;
+		margin:0;
+		display:inline;
+		li {
+			display:inline;
+			list-style:none;
+			padding:0 4px 0 0;
+			margin:0;
+			text-align:center;
+		}
+	}
+}
+
+/*item author*/
+.itemAuthorBlock {
+	background: transparent;
+	border: 0;
+	margin:0 0 16px 0;
+	padding:8px;
+	.itemAuthorAvatar {
+		.border-radius(50%);
+		.transition(all 0.4s);
+		float:left;
+		display:block;
+		background:#fff;
+		padding:4px;
+		border:1px solid #ddd;
+		margin:0 8px 0 0;
+	}
+	.itemAuthorDetails {
+		margin:0;
+		padding:4px 0 0 0;
+		h3 {
+			.authorName {
+				margin:0 0 4px 0;
+				padding:0;
+				a {
+					font-family:Georgia, "Times New Roman", Times, serif;
+					font-size:16px;
+					
+				}
+			}
+		}
+		span {
+			.itemAuthorUrl {
+				font-weight:bold;
+				color:#555;
+				border-right:1px solid #ccc;
+				padding:0 8px 0 0;
+				margin:0 4px 0 0;
+			}
+			.itemAuthorEmail {
+				font-weight:bold;
+				color:#555;
+				a {
+					font-weight:normal;
+				}
+			}
+		}
+	}
+	&:hover {
+		.itemAuthorAvatar {
+			.rotate(10deg);
+		}
+	}
+}
+
+/*Comments*/
+.itemComments {
+	background: transparent;
+	border: 0;
+	.itemCommentsCounter {
+		border-bottom: 1px solid #cccccc;
+		&:before {
+			content: "\f0e6";
+			font-family: "FontAwesome";
+			margin-right: 5px;
+		}
+	}
+	ul.itemCommentsList {
+		margin:0 0 16px;
+		padding:0;
+		list-style:none;
+		li{
+			padding: 5px 0;
+			margin:0;
+			border-bottom:1px solid #ddd;
+			img {
+				border: 1px solid #cccccc;
+				.border-radius(10px);
+				float:left;
+				margin:4px 4px 4px 0;
+				padding:4px;
+				background:#fff;
+			}
+			&.authorResponse {
+				background: @white;
+				border: 0;
+				margin-bottom: 10px;
+			}
+			&.unpublishedComment {
+				background:#ffeaea;
+			}
+			span {
+				&.commentDate {
+					padding:0 4px 0 0;
+					margin:0 8px 0 0;
+					border-right:1px solid #ccc;
+					font-weight:bold;
+					font-size:14px;
+				}
+				&.commentAuthorName {
+					font-weight:bold;
+					font-size:14px;
+				}
+				&.commentAuthorEmail {
+					display:none;
+				}
+				&.commentLink {
+					margin-left:8px;
+					a {
+						font-size:11px;
+						color:#999;
+						text-decoration:underline;
+						&:hover {
+							font-size:11px;
+							color:#555;
+							text-decoration:underline;
+						}
+					}
+				}
+				&.commentToolbar {
+					display:block;
+					clear:both;
+					a {
+						font-size:11px;
+						color:#999;
+						text-decoration:underline;
+						margin-right:4px;
+						&:hover {
+							font-size:11px;
+							color:#555;
+							text-decoration:underline;
+						}
+					}
+				}
+				&.commentToolbarLoading {
+					background:url(../images/k2/searchLoader.gif) no-repeat 100% 50%;
+				}
+			}
+		}
+	}
+}
+
+/*Item Comment Form*/
+.itemCommentsForm {
+	h3 {
+		margin:0;padding:0 0 4px 0;
+	}
+	form {
+		input {
+			&#submitCommentButton {
+				border: 0;
+				padding: 5px 10px;
+				margin: 16px 0 0;
+				display:block;
+				font-size:16px;
+			}
+		}
+		label {
+			display:block;
+			margin:12px 0 0 2px;
+		}
+		textarea {
+			&.inputbox {
+				display:block;
+				width:350px;
+				height:160px;
+				margin:0;
+			}
+		}
+		input {
+			&.inputbox {
+				display:block;
+				width:350px;
+				margin:0;
+			}
+		}
+		span {
+			&#formLog {
+				margin:0 0 0 20px;
+				padding:0 0 0 20px;
+				font-weight:bold;
+				color:#CF1919;
+			}
+		}
+		.formLogLoading {
+			background:url(../images/k2/loading.gif) no-repeat left center;
+		}
+	}
+	.itemCommentsFormNotes {
+		border-top:2px solid #ccc;
+	}
+}
+
+/* --- RSS feed icon --- */
+div.k2FeedIcon {
+	padding:4px 8px;
+	a {
+		display:block;
+		float:right;
+		margin:0;
+		padding:0;
+		width:16px;
+		height:16px;
+		background:url(../images/k2/feed.png) no-repeat 50% 50%;	
+		span {
+			display:none;
+		}
+	}
+}
+
+
+.k2Padding {
+	padding:4px;
+}
+/* --- Zebra rows --- */
+.even {
+	background:#fffff0;
+	padding:2px;
+	border-bottom:1px dotted #ccc;
+}
+.odd {
+	background:#fff;
+	padding:2px;
+	border-bottom:1px dotted #ccc;
+}
+
+/* --- Pagination --- */
+div.k2Pagination {
+	padding:8px;
+	margin:24px 0 4px 0;
+	text-align:center;
+	color:#999;
+	ul {
+		text-align:center;
+		li {
+			display:inline;
+		}
+	}
+}
+
+
+/*Clear*/
+.clr {
+	border: medium none;
+	clear: both;
+	display: block;
+	float: none;
+	height: 0;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*End default*/
+.vina-header-toolbar {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style: none;
+		display: inline-block;
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+/** Regrister Style **/
+.k2AccountPage {
+	table.admintable {
+		width: 100%;
+		th{
+			&.k2ProfileHeading {
+				background: transparent;
+			}
+		}
+		td{
+			&.key, &.paramlist_key {
+				background: transparent;
+				border: 0;
+				display: inline-block;
+			}
+		}
+	}
+}
+.itemRatingForm {
+	line-height: 22px;	
+}
+/*K2 tools */
+
+/*k2 search*/
+.vina-search {
+	input[type="text"] {
+		.box-sizing(border-box);
+		height: auto;
+		.border-radius(0);
+		padding: 8px;
+		width: 100%;
+	}
+}
+/*menu categories*/
+
+/** Calendar **/
+div.k2CalendarBlock {
+	min-height: 235px;
+	height: auto;
+	margin-bottom:8px;
+	table.calendar {
+		width: 100%;
+		margin:0 auto;
+		background:#fff;
+		border-collapse:collapse;
+	}
+	tr {
+		td{
+			line-height: 28px;
+			padding: 0;		
+			text-align:center;
+			vertical-align:middle;
+			border:1px solid #f4f4f4;
+			background:#fff;
+			&.calendarNavMonthNext,&.calendarCurrentMonth,&.calendarNavMonthPrev {
+				background: @white;
+				text-align: center;
+				a {
+					font-size:20px;
+					text-decoration:none;
+				}
+			}
+			&.calendarDayName {
+				background:#e9e9e9;
+				font-size:11px;
+				width:14.2%;
+			}
+			&.calendarToday {
+				background:#135cae;
+				color:#fff;
+			}
+			&.calendarDateEmpty {
+				background:#fbfbfb;
+			}
+			.calendarTodayLinked {
+				background:#135cae;
+				color:#fff;
+				padding:0;
+				a {
+					display:block;
+					padding:2px;
+					color:#fff;
+					text-decoration:none;
+					&:hover {
+						display:block;
+						background:#BFD9FF;
+						padding:2px;
+						text-decoration:none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*end k2 tools*/
+
+/*K2 content*/
+/*k2 last blog*/ 
+.vina-blogs {
+	li {
+		list-style: none;
+		border: 0;
+		margin-bottom: 13px !important;
+	}
+	ul,li {
+		margin: 0;
+		background: @white;
+		padding: 0;
+	}
+	.moduleItemTitle {
+		display: block;
+		font-size: 14px;
+		overflow: hidden;
+		color: @black;
+		line-height: 18px;
+		font-weight: 400;
+	}
+	img {
+		.transition(all 400ms linear 0s);
+		&:hover {
+			.opacity(80);
+		}
+	}
+	.moduleItemDateCreated {
+		font-size: 12px;
+		color: #999999;
+		i {
+			&:before {
+				font-size: 16px;
+			}
+		}
+	}
+}
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img {
+	border: 0;
+	margin: 0;
+}
+/** Link hover **/
+.vina-tag {
+	font-weight: bold;
+	background: #cccccc;
+	display: inline-block;
+	line-height: 26px;
+	padding: 0 17px !important;
+	margin-bottom: 15px;
+	font-size: 100% !important;
+	margin-right: 25px;
+	position: relative;
+	.border-radius( 0 4px 4px 0);
+	top: 0;
+	content: "";
+	cursor: pointer;
+	text-align: center;
+	text-transform: lowercase;
+	border: 0;
+	.transition(all 0.3s ease);
+	&:before {
+		color: rgba(255, 255, 255, 0.9);
+		background: #cccccc;
+		display: inline-block;
+		padding: 10px 10px 8px;
+		position: absolute;
+		top: 4px;
+		right: -6px;
+		z-index: 1;
+		content: "";
+		cursor: pointer;
+		.transform(rotateY(6deg) rotateZ(-45deg) scaleX(1) scaleY(1) scaleZ(1));
+		.transition(all 0.3s ease);
+	}
+	&:after {
+		display: inline-block;
+		background: #FFF;
+		.border-radius(10px);
+		width: 8px;
+		height: 8px;
+		position: absolute;
+		top: 9px;
+		right: 0;
+		z-index: 2;
+		content: "";
+		cursor: pointer;
+		.transition(all 0.3s linear);
+	}
+}
+/** Font-size **/
+div.catItemHeader span.catItemDateCreated , div.tagItemHeader span.tagItemDateCreated {
+	font-size: 12px;
+}

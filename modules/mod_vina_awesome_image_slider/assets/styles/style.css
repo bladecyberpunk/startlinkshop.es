@@ -1,0 +1,251 @@
+/*
+# ------------------------------------------------------------------------
+# Vina Awesome Image Slider for Joomla 3
+# ------------------------------------------------------------------------
+# Copyright(C) 2014 www.VinaGecko.com. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: VinaGecko.com
+# Websites: http://vinagecko.com
+# Forum:    http://vinagecko.com/forum/
+# ------------------------------------------------------------------------
+*/
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond&subset=latin,cyrillic,latin-ext);
+.vina-awesome-slider { 
+	zoom: 1; 
+	position: relative; 
+	margin:0px auto 0px;
+	z-index:90;
+	border:none;
+	text-align:left; /* reset align=center */
+	font-size: 10px;
+}
+.vina-awesome-slider .ws_images ul{
+	position:relative;
+	width: 10000%; 
+	height:auto;
+	left:0;
+	list-style:none;
+	margin:0;
+	padding:0;
+	border-spacing:0;
+	overflow: visible;
+	/*table-layout:fixed;*/
+}
+.vina-awesome-slider .ws_images ul li{
+	width:1%;
+	line-height:0; /*opera*/
+	float:left;
+	font-size:0;
+	padding:0 0 0 0 !important;
+	margin:0 0 0 0 !important;
+}
+.vina-awesome-slider .ws_images{
+	position: relative;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.vina-awesome-slider .ws_images a{
+	width:100%;
+	display:block;
+	color:transparent;
+}
+.vina-awesome-slider img{
+	max-width: none !important;
+}
+.vina-awesome-slider .ws_images img{
+	width:100%;
+	border:none 0;
+	max-width: none;
+	padding:0;
+	margin:0;
+}
+.vina-awesome-slider a{ 
+	text-decoration: none; 
+	outline: none; 
+	border: none; 
+}
+.vina-awesome-slider  .ws_bullets { 
+	font-size: 0px; 
+	float: left;
+	position:absolute;
+	z-index:70;
+}
+.vina-awesome-slider  .ws_bullets div{
+	position:relative;
+	float:left;
+}
+.vina-awesome-slider  .wsl{
+	display:none;
+}
+.vina-awesome-slider sound, 
+.vina-awesome-slider object{
+	position:absolute;
+}
+.vina-awesome-slider .ws_photoItem {
+	border: 2em solid #fff;
+	margin-left: -2em;
+	margin-top: -2em;
+}
+.vina-awesome-slider  .ws_bullets { 
+	padding: 5px; 
+}
+.vina-awesome-slider .ws_bullets a { 
+	width:16px;
+	height:16px;
+	background: url(../images/bullet.png) left top;
+	float: left; 
+	text-indent: -4000px; 
+	position:relative;
+	margin-left:7px;
+	color:transparent;
+}
+.vina-awesome-slider .ws_bullets a:hover{
+	background-position: 0 50%;	
+}
+.vina-awesome-slider .ws_bullets a.ws_selbull{ 
+	background-position: 0 100%;
+}	
+.vina-awesome-slider a.ws_next, .vina-awesome-slider a.ws_prev {
+	background-size: 200%;
+	position:absolute;
+	display:none;
+	top:50%;
+	margin-top:-2.1em;
+	z-index:60;
+	width: 4.3em;	
+	height: 4.3em;
+	background-image: url(../images/arrows.png);
+}
+.vina-awesome-slider a.ws_next{
+	background-position: 100% 0;
+	right:0.5em;
+}
+.vina-awesome-slider a.ws_prev {
+	left:0.5em;
+	background-position: 0 0; 
+}
+.vina-awesome-slider a.ws_next:hover{
+	background-position: 100% 100%;
+}
+.vina-awesome-slider a.ws_prev:hover {
+	background-position: 0 100%; 
+}
+* html .vina-awesome-slider a.ws_next,* html .vina-awesome-slider a.ws_prev{display:block}
+.vina-awesome-slider:hover a.ws_next, .vina-awesome-slider:hover a.ws_prev {display:block}
+/*playpause*/
+.vina-awesome-slider .ws_playpause {
+	display:none;
+    width: 4.3em;
+    height: 4.3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.1em;
+    margin-top: -2.1em;
+    z-index: 59;
+	background-size: 100%;
+}
+.vina-awesome-slider:hover .ws_playpause {
+	display:block;
+}
+.vina-awesome-slider .ws_pause {
+    background-image: url(../images/pause.png);
+}
+.vina-awesome-slider .ws_play {
+    background-image: url(../images/play.png);
+}
+.vina-awesome-slider .ws_pause:hover, 
+.vina-awesome-slider .ws_play:hover {
+    background-position: 100% 100% !important;
+}/* bottom center */
+.vina-awesome-slider  .ws_bullets {
+    bottom: 0px;
+	left:50%;
+}
+.vina-awesome-slider  .ws_bullets div{
+	left:-50%;
+}
+.vina-awesome-slider .ws-title{
+	position:absolute;
+	display:block;
+	padding:0.9em;
+	background-color:#ffffff;
+	color:#F2A680;
+	z-index: 50;
+	font-family:'EB Garamond',Georgia,serif;	
+	font-weight: bold;
+	text-shadow: 0 1px 0 #a3a3a3;
+	opacity:0.9;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+}
+.vina-awesome-slider .ws-title div{
+	margin-top: 0.3em;
+	font-size: 1.8em;
+	line-height: 1.15em;
+	font-weight: normal;
+	color: #8a817c;
+	text-shadow:none;
+}
+.vina-awesome-slider .ws-title span{
+	font-size: 2.8em;
+	line-height: 1.2em;	
+}.vina-awesome-slider .ws_images ul{
+	animation: wsBasic 16s infinite;
+	-moz-animation: wsBasic 16s infinite;
+	-webkit-animation: wsBasic 16s infinite;
+}
+@keyframes wsBasic{0%{left:-0%} 12.5%{left:-0%} 25%{left:-100%} 37.5%{left:-100%} 50%{left:-200%} 62.5%{left:-200%} 75%{left:-300%} 87.5%{left:-300%} }
+@-moz-keyframes wsBasic{0%{left:-0%} 12.5%{left:-0%} 25%{left:-100%} 37.5%{left:-100%} 50%{left:-200%} 62.5%{left:-200%} 75%{left:-300%} 87.5%{left:-300%} }
+@-webkit-keyframes wsBasic{0%{left:-0%} 12.5%{left:-0%} 25%{left:-100%} 37.5%{left:-100%} 50%{left:-200%} 62.5%{left:-200%} 75%{left:-300%} 87.5%{left:-300%} }
+
+.vina-awesome-slider .ws_bullets  a img{
+	text-indent:0;
+	display:block;
+	bottom:20px;
+	left:-64px;
+	visibility:hidden;
+	position:absolute;
+    border: 4px solid rgba(220, 220, 220, 0.6);
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	max-width:none;
+}
+.vina-awesome-slider .ws_bullets a:hover img{
+	visibility:visible;
+}
+.vina-awesome-slider .ws_bulframe div div{
+	overflow:visible;
+	position:relative;
+}
+.vina-awesome-slider .ws_bulframe div {
+	left:0;
+	overflow:hidden;
+	position:relative;
+	background-color:rgba(220, 220, 220, 0.6);
+}
+.vina-awesome-slider  .ws_bullets .ws_bulframe{
+	display:none;
+	bottom:21px;
+	overflow:visible;
+	position:absolute;
+	cursor:pointer;
+    border: 4px solid rgba(220, 220, 220, 0.6);
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+}
+.vina-awesome-slider .ws_bulframe span{
+	display:block;
+	position:absolute;
+	bottom:-10px;
+	margin-left:-4px;
+	left:64px;
+	background:url(../images/triangle.png);
+	width:15px;
+	height:6px;
+}
